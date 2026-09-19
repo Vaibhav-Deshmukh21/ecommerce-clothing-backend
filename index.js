@@ -41,7 +41,7 @@ app.use(
 );
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("/api/user", userRouter);git status
+app.use("/api/user", userRouter);
 app.use("/api/product", productRoute);
 app.use("/api/order", orderRoute);
 app.use("/api", adminRoutes);
