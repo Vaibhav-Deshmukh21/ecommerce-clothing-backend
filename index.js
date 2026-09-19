@@ -34,6 +34,11 @@ app.use(
 const swaggerDocument = JSON.parse(
   fs.readFileSync("./openapi.json", "utf-8")
 );
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerDocument)
+);
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRouter);
@@ -41,11 +46,7 @@ app.use("/api/product", productRoute);
 app.use("/api/order", orderRoute);
 app.use("/api", adminRoutes);
 app.use("/api/contact", contactRoute);
-app.use(
-  "/api-docs",
-  swaggerUi.serve,
-  swaggerUi.setup(swaggerDocument)
-);
+
 // Home route
 app.get("/", (req, res) => {
   res.send("Hello From Server  ");
