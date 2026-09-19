@@ -9,5 +9,4 @@ router.get("/dashboard", adminAuth, getDashboardStats);
 router.get("/dashboard/profile", adminAuth, getAdminProfile);
 router.put("/dashboard/profile", adminAuth, upload.single("profilePic"), updateAdminProfile);
 router.put("/dashboard/password", adminAuth, changeAdminPassword);
-
 export default router;
