@@ -1,3 +1,5 @@
+import "dotenv/config";
+const backendUrl = process.env.BACKEND_URL;
 const openapi = {
   openapi: "3.0.3",
 
@@ -9,7 +11,7 @@ const openapi = {
 
   servers: [
     {
-      url: process.env.BACKEND_URL,
+      url: backendUrl,
       description: "Production"
     }
   ],
