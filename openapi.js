@@ -9,7 +9,7 @@ const openapi = {
 
   servers: [
     {
-      url: "https://ecommerce-clothing-backend-1m1z.onrender.com",
+      url: process.env.BACKEND_URL,
       description: "Production"
     }
   ],
